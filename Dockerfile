@@ -13,6 +13,9 @@ ENV RAILS_ENV development
 ENV REDIS_HOST redis
 ENV TEST_DATABASE_URL postgresql://postgres@postgres/publishing-api-test
 
+# Hack in content-schemas
+RUN git clone https://github.com/alphagov/govuk-content-schemas $GOVUK_CONTENT_SCHEMAS_PATH
+
 ENV APP_HOME /app
 RUN mkdir $APP_HOME
 
