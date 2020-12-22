@@ -95,3 +95,21 @@ bundle exec rake expanded_links:populate_by_document_type['document-type']
 ```
 bundle exec rake expanded_links:truncate
 ```
+
+## Looking up publishings and unpublishing by date range
+
+There are two tasks provided which can take a from timestamp and an until
+timestamp and print a CSV of editions that was either published or
+unpublished between those values.
+
+To see all the editions that were published between two times run:
+
+```
+bundle exec rake "date_range:publishings['2020-10-01 10:00', '2020-12-31 10:00']"
+```
+
+To see all the editions that were unpublished between two times run:
+
+```
+bundle exec rake "date_range:unpublishings['2020-10-01 10:00', '2020-12-31 10:00']"
+```
